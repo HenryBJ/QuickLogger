@@ -1,0 +1,6 @@
+@QuickLogger_HostAddress = http://localhost:5158
+
+GET {{QuickLogger_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

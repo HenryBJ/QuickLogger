@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35707.178
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickLogger", "QuickLogger\QuickLogger.csproj", "{BE7AC296-4EDE-494D-B280-0C36CEAD0F74}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickLogger.Tests", "QuickLogger.Tests\QuickLogger.Tests.csproj", "{51D26426-7977-465B-BD5A-3053A9DD471D}"
+EndProject
+Global
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BE7AC296-4EDE-494D-B280-0C36CEAD0F74}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE7AC296-4EDE-494D-B280-0C36CEAD0F74}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE7AC296-4EDE-494D-B280-0C36CEAD0F74}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{BE7AC296-4EDE-494D-B280-0C36CEAD0F74}.Debug|x64.Build.0 = Debug|Any CPU
+		{BE7AC296-4EDE-494D-B280-0C36CEAD0F74}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{BE7AC296-4EDE-494D-B280-0C36CEAD0F74}.Debug|x86.Build.0 = Debug|Any CPU
+		{BE7AC296-4EDE-494D-B280-0C36CEAD0F74}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE7AC296-4EDE-494D-B280-0C36CEAD0F74}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE7AC296-4EDE-494D-B280-0C36CEAD0F74}.Release|x64.ActiveCfg = Release|Any CPU
+		{BE7AC296-4EDE-494D-B280-0C36CEAD0F74}.Release|x64.Build.0 = Release|Any CPU
+		{BE7AC296-4EDE-494D-B280-0C36CEAD0F74}.Release|x86.ActiveCfg = Release|Any CPU
+		{BE7AC296-4EDE-494D-B280-0C36CEAD0F74}.Release|x86.Build.0 = Release|Any CPU
+		{51D26426-7977-465B-BD5A-3053A9DD471D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51D26426-7977-465B-BD5A-3053A9DD471D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51D26426-7977-465B-BD5A-3053A9DD471D}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{51D26426-7977-465B-BD5A-3053A9DD471D}.Debug|x64.Build.0 = Debug|Any CPU
+		{51D26426-7977-465B-BD5A-3053A9DD471D}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{51D26426-7977-465B-BD5A-3053A9DD471D}.Debug|x86.Build.0 = Debug|Any CPU
+		{51D26426-7977-465B-BD5A-3053A9DD471D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51D26426-7977-465B-BD5A-3053A9DD471D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{51D26426-7977-465B-BD5A-3053A9DD471D}.Release|x64.ActiveCfg = Release|Any CPU
+		{51D26426-7977-465B-BD5A-3053A9DD471D}.Release|x64.Build.0 = Release|Any CPU
+		{51D26426-7977-465B-BD5A-3053A9DD471D}.Release|x86.ActiveCfg = Release|Any CPU
+		{51D26426-7977-465B-BD5A-3053A9DD471D}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
