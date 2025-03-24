@@ -7,10 +7,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickLogger", "QuickLogger\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QuickLogger.Tests", "QuickLogger.Tests\QuickLogger.Tests.csproj", "{51D26426-7977-465B-BD5A-3053A9DD471D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".github", ".github", "{4A335AA4-5968-4A5A-9A75-1F5A98D0DEDA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{BCD7C73B-85BC-400E-98C4-6B0F80674426}"
+	ProjectSection(SolutionItems) = preProject
+		QuickLogger\.github\workflows\pipeline.yml = QuickLogger\.github\workflows\pipeline.yml
+	EndProjectSection
+EndProject
 Global
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|x64 = Debug|x64
@@ -44,5 +48,11 @@ Global
 		{51D26426-7977-465B-BD5A-3053A9DD471D}.Release|x64.Build.0 = Release|Any CPU
 		{51D26426-7977-465B-BD5A-3053A9DD471D}.Release|x86.ActiveCfg = Release|Any CPU
 		{51D26426-7977-465B-BD5A-3053A9DD471D}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BCD7C73B-85BC-400E-98C4-6B0F80674426} = {4A335AA4-5968-4A5A-9A75-1F5A98D0DEDA}
 	EndGlobalSection
 EndGlobal
