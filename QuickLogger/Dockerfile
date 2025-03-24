@@ -14,7 +14,7 @@ ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["QuickLogger/QuickLogger.csproj", "."]
 RUN dotnet restore "./QuickLogger.csproj"
-COPY . .
+COPY QuickLogger/ .
 WORKDIR "/src/."
 RUN dotnet build "./QuickLogger.csproj" -c $BUILD_CONFIGURATION -o /app/build
 
