@@ -21,4 +21,8 @@
     <PackageReference Include="Scalar.aspnetcore" Version="2.1.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Include=".github\workflows\pipeline.yml" />
+  </ItemGroup>
+
 </Project>

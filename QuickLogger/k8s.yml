@@ -1,0 +1,67 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: quicklogger-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: quicklogger-api-app
+  template:
+    metadata:
+      labels:
+        app: quicklogger-api-app
+    spec:
+      imagePullSecrets:
+      - name: dockerhub-secret
+      containers:
+        - name: quicklogger-api-container
+          image: cod4it/quicklogger:$MICROSERVICE_QUICKLOGGER_API
+          ports:
+            - containerPort: 80
+          envFrom:
+            - configMapRef:
+                name: joseenriquedev-configmap
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: quicklogger-api-service
+spec:
+  selector:
+    app: quicklogger-api-app
+  ports:
+    - port: 80
+      protocol: TCP
+      targetPort: 8080
+      name: http
+    - port: 443
+      protocol: TCP
+      targetPort: 8081
+      name: https
+  type: ClusterIP 
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-ingress-quicklogger-api
+  annotations:
+    nginx.ingress.kubernetes.io/proxy-body-size: "20m"
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - quicklogger.joseenrique.dev
+    secretName: joseenrique-dev-tls
+  rules:
+    - host: quicklogger.joseenrique.dev
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: quicklogger-api-service
+                port:
+                  number: 80
+    
