@@ -32,7 +32,7 @@ jobs:
           context: .
           push: true
           tags: cod4it/quicklogger:${{ env.MICROSERVICE_QUICKLOGGER_API }}
-          file: Dockerfile
+          file: QuickLogger/Dockerfile
       
       - name: Executing remote ssh commands
         uses: appleboy/ssh-action@v1.0.0
