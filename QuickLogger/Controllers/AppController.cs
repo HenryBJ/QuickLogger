@@ -19,7 +19,7 @@ public class AppController : ControllerBase
     }
 
     [HttpPost]
-    public async Task<IActionResult> Add([FromBody] QuickLogger.Domain.Model.App data)
+    public async Task<IActionResult> Add([FromBody] QuickLogger.Domain.Dto.App data)
     {
         var dbhandler = await _databaseHandlerFactory.GetLeastLoadedDatabaseHandlerAsync();
         var repo = await dbhandler.GetAppsRepositoryAsync();
