@@ -12,7 +12,7 @@ EXPOSE 8081
 FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
-COPY ["QuickLogger.csproj", "."]
+COPY ["QuickLogger/QuickLogger.csproj", "."]
 RUN dotnet restore "./QuickLogger.csproj"
 COPY . .
 WORKDIR "/src/."
