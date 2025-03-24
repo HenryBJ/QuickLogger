@@ -86,29 +86,29 @@ public class AdminController : ControllerBase
         
     }
 
-    [HttpDelete("delete-bditem")]
-    public async Task<IActionResult> Delete([FromBody] QuickLogger.Domain.Dto.DBItemDelete data)
-    {
-        try
-        {
-            var dbhandlers = await _databaseHandlerFactory.GetAllDatabaseHandlersAsync();
-            await Task.WhenAll(dbhandlers.Select(async handler =>
-            {
-                var repo = await handler.GetDBItemRepositoryAsync();
-                if (await repo.ExistsAsync(data.Id))
-                {
-                    await repo.DeleteByIdAsync(data.Id);
-                }
-            }));
-            return Ok();
-        }
-        catch (Exception ex)
-        {
-            return StatusCode(500, new { error = ex.Message });
-        }
-    }
+    //[HttpDelete("delete-bditem")]
+    //public async Task<IActionResult> Delete([FromBody] QuickLogger.Domain.Dto.DBItemDelete data)
+    //{
+    //    try
+    //    {
+    //        var dbhandlers = await _databaseHandlerFactory.GetAllDatabaseHandlersAsync();
+    //        await Task.WhenAll(dbhandlers.Select(async handler =>
+    //        {
+    //            var repo = await handler.GetDBItemRepositoryAsync();
+    //            if (await repo.ExistsAsync(data.Id))
+    //            {
+    //                await repo.DeleteByIdAsync(data.Id);
+    //            }
+    //        }));
+    //        return Ok();
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        return StatusCode(500, new { error = ex.Message });
+    //    }
+    //}
 
-    [HttpDelete("list-bditem")]
+    [HttpGet("list-bditem")]
     public async Task<IActionResult> List()
     {
         try
